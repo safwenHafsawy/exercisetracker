@@ -31,9 +31,9 @@ const getLogs = async (req, res) => {
       new Date(doc.date).getTime() > from && new Date(doc.date).getTime() < to
   );
   //creating the logs
-  let logs = [];
+  let log = [];
   docs.forEach((doc) => {
-    logs.push({
+    log.push({
       description: doc.description,
       duration: doc.duration,
       date: doc.date,
