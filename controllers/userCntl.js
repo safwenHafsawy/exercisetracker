@@ -6,7 +6,7 @@ const createUser = (req, res) => {
   user
     .save()
     .then(() => {
-      res.status(201).json({ id: user["_id"], username: user.username });
+      res.status(201).json({ username: user.username, _id: user["_id"] });
     })
     .catch((e) => {
       res.json(e);
