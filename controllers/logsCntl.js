@@ -39,6 +39,6 @@ const getLogs = async (req, res) => {
       date: doc.date,
     });
   });
-  return res.status(200).json({ username, count, _id: userID, logs });
+  return res.status(200).json({ username, count, _id: userID, log });
 };
 module.exports = { getLogs };
