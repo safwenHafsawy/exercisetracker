@@ -17,7 +17,7 @@ const getUsers = (req, res) => {
   userModel
     .find()
     .then((data) => {
-      res.status(200).json({ data });
+      res.status(200).send(data);
     })
     .catch((error) => {
       res.json({ error });
